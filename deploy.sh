@@ -1,28 +1,26 @@
 #!/usr/bin/env sh
 
-# 当发生错误时中止脚本
+# abort on errors
 set -e
 
-# 构建
+# build
 npm run build
 
-# cd 到构建输出的目录下
+# navigate into the build output directory
 cd dist
 
-# 部署到自定义域域名
+# if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
 
 git init
-git checkout -B main
+git checkout -b main
 git add -A
 git commit -m 'deploy'
 
-# main
-# 部署到 https://Ariel0508.github.io
+# if you are deploying to https://<USERNAME>.github.io
 # git push -f git@github.com:Ariel0508/Ariel0508.github.io.git main
 
-# gh-pages
-# 部署到 https://Ariel0508.github.io/vite-vue
-git push -f git@github.com:Ariel0508/vite-vue.git main:gh-pages
+# if you are deploying to https://<USERNAME>.github.io/<REPO>
+# git push -f git@github.com:Ariel0508/vite-deploying.git main:gh-pages
 
 cd -
