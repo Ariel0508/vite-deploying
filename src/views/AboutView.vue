@@ -10,9 +10,9 @@
 </template>
 
 <script>
-import NarbarComponent from './components/NarbarComponent.vue'
-import CartComponent from './components/CartComponent.vue'
-import ProductComponent from './components/ProductComponent.vue'
+import NarbarComponent from '../components/NarbarComponent.vue'
+import CartComponent from '../components/CartComponent.vue'
+import ProductComponent from '../components/ProductComponent.vue'
 export default {
   data() {
     return {
@@ -37,12 +37,23 @@ export default {
 }
 </script>
 
-<style>
-/* @media (min-width: 1024px) {
+<style lang="scss">
+@import "./assets/all.scss";
+.card-img-top {
+            object-fit: cover;
+            height: 200px;
+          }
+
+          .table-image {
+            width: 75px;
+            height: 75px;
+            object-fit: cover;
+          }
+/*@media (min-width: 1024px) {
   .about {
     min-height: 100vh;
     display: flex;
     align-items: center;
   }
-} */
+}*/
 </style>
