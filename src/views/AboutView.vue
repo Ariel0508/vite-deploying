@@ -1,10 +1,18 @@
 <template>
-  <div class="about">
+  <!-- <div class="about">
     {{ data }}
+  </div> -->
+  <div class="container">
+    <NarbarComponent></NarbarComponent>
+    <CartComponent></CartComponent>
+    <ProductComponent></ProductComponent>
   </div>
 </template>
 
 <script>
+import NarbarComponent from './components/NarbarComponent.vue'
+import CartComponent from './components/CartComponent.vue'
+import ProductComponent from './components/ProductComponent.vue'
 export default {
   data() {
     return {
@@ -20,16 +28,21 @@ export default {
       this.data = res.data.results[0]
       console.log(this.data)
     })
+  },
+  components: {
+    NarbarComponent,
+    CartComponent,
+    ProductComponent
   }
 }
 </script>
 
 <style>
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   .about {
     min-height: 100vh;
     display: flex;
     align-items: center;
   }
-}
+} */
 </style>
