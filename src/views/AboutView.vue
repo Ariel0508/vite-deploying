@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./assets/all.scss";
+@import "../assets/all.scss";
 .card-img-top {
             object-fit: cover;
             height: 200px;
