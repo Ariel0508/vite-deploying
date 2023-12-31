@@ -1,1 +1,0 @@
-import{_ as a,o as e,c as n,t as r}from"./index-0FP610uW.js";const c={data(){return{data:{}}},mounted(){console.log("這是產品的環境");const t="https://randomuser.me/api/";this.$http.get(t).then(o=>{this.data=o.data.results[0],console.log(this.data)})}},d={class:"about"};function i(t,o,l,p,s,u){return e(),n("div",d,r(s.data),1)}const h=a(c,[["render",i]]);export{h as default};
